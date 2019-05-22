@@ -1,0 +1,16 @@
+Linux_coredump is a volatility plugin that attempts to create a core dump file starting from the memory of a Linux process.
+
+Usage:
+        1. Extract the linux_coredump folder and put it in a directory (for instance ~/Downloads).
+        2. Issue the command:
+               volatility --plugins=<path of extracted linux_coredump dir> --profile=<memory profile> -f <memory dump> linux_coredump --pid <process pid> --dump-dir <output dir> --output-file <output file>
+           or
+               vol.py --plugins=<path of extracted linux_coredump dir> --profile=<memory profile> -f <memory dump> linux_coredump --pid <process pid> --dump-dir <output dir> --output-file <output file>
+           Depending on how you installed volatility (from apt or github).
+
+The plugin will output the corefile in the specified directory and with the specified file name.
+
+
+NOTE:
+        1. The --plugins option must be the first option.
+        2. The plugin may require some time for processes that use a lot of memory (up to 15-20 minutes).
