@@ -11,6 +11,6 @@ Usage:
 The plugin will output the corefile in the specified directory and with the specified file name.
 
 
-NOTE:
+NOTES:
         1. The --plugins option must be the first option.
         2. The plugin may require some time for processes that use a lot of memory (up to 15-20 minutes).
