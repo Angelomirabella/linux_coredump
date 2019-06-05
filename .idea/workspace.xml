@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="256a42b3-cb93-4da0-8d40-fa3f52771637" name="Default Changelist" comment="" />
+    <list default="true" id="256a42b3-cb93-4da0-8d40-fa3f52771637" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux_coredump.py" beforeDir="false" afterPath="$PROJECT_DIR$/linux_coredump.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/linux_coredump.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+            <state relative-caret-position="811">
+              <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -25,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4800">
+            <state relative-caret-position="841">
               <caret line="320" column="66" selection-start-line="320" selection-start-column="66" selection-end-line="320" selection-end-column="66" />
             </state>
           </provider>
@@ -34,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coredump.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6285">
-              <caret line="421" selection-start-line="421" selection-end-line="421" />
+            <state relative-caret-position="-3044">
+              <caret line="413" column="68" selection-start-line="413" selection-start-column="63" selection-end-line="413" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -83,6 +87,9 @@
       <find>gen_prstatus_x86</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -105,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,10 +124,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -242,27 +250,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/elf64.py" />
     <entry file="file://$PROJECT_DIR$/criucoredump.py" />
-    <entry file="file://$PROJECT_DIR$/linux_coredump.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4800">
+        <state relative-caret-position="841">
           <caret line="320" column="66" selection-start-line="320" selection-start-column="66" selection-end-line="320" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/coredump.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6285">
-          <caret line="421" selection-start-line="421" selection-end-line="421" />
+        <state relative-caret-position="-3044">
+          <caret line="413" column="68" selection-start-line="413" selection-start-column="63" selection-end-line="413" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linux_coredump.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

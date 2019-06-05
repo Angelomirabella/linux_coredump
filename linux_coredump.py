@@ -62,10 +62,11 @@ class linux_coredump(linux_pslist.linux_pslist):
             tsk = task
             vma_list.append(vma)
             (fname, major, minor, ino, pgoff) = vma.info(task)
+       #     print fname
             if fname == '[stack]':
                 if self.addr_space.profile.metadata['arch'] == "x86" or len(hex(vma.vm_start).lstrip('0x').rstrip('L')) < 12:
                     x86=True
-
+        #exit(0)
         if empty is True:
             debug.error("The reqeusted pid does not exist!")
 
@@ -94,6 +95,9 @@ class linux_coredump(linux_pslist.linux_pslist):
         return
 
     def render_text(self, outfd, data):
+        print self._config.DUMP_DIR,self._config.OUTPUT_FILE
+        file_path = os.path.join(self._config.DUMP_DIR, self._config.OUTPUT_FILE)
+        outfd=open(file_path,'wb')
         if self.cd:
             self.cd.write(outfd)
         else:
