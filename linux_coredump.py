@@ -62,11 +62,9 @@ class linux_coredump(linux_pslist.linux_pslist):
             tsk = task
             vma_list.append(vma)
             (fname, major, minor, ino, pgoff) = vma.info(task)
-       #     print fname
             if fname == '[stack]':
-                if self.addr_space.profile.metadata['arch'] == "x86" or len(hex(vma.vm_start).lstrip('0x').rstrip('L')) < 12:
+                if self.addr_space.profile.metadata['arch'] == "x86" or vma.vm_end < 2**32:
                     x86=True
-        #exit(0)
         if empty is True:
             debug.error("The reqeusted pid does not exist!")
 
