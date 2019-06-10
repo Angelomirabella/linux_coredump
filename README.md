@@ -20,4 +20,4 @@ The plugin will output the corefile in the specified directory and with the spec
 ### NOTES
 * The --plugins option must be the first option.
 * The plugin may require some time for processes that use a lot of memory (up to 15-20 minutes).
-* The volatility version installed using apt differs from the one present in ([github]: https://github.com/volatilityfoundation/volatility). This latter version probably has a bug and does not show the name of the process memory mappings.
+* The volatility version installed using apt differs from the one present in ( [github]: https://github.com/volatilityfoundation/volatility ). This latter version probably has a bug and does not show the name of the process memory mappings.
