@@ -77,13 +77,11 @@ class linux_coredump(linux_pslist.linux_pslist):
         for t in tsk.threads():
             t_pids[i] = t.pid
             i += 1
-
         i = 0
         for task,name,thread_regs in data:
             for thread_name, regs in thread_regs:
                 threads_registers[str(t_pids[i])] = regs
                 i += 1
-
         self.cd=coredump.coredump(tsk,vma_list,threads_registers,x86)
         self.cd.generate_coredump()
 
