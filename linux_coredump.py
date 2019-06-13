@@ -31,8 +31,6 @@ class linux_coredump(linux_pslist.linux_pslist):
         plugin_conf.PID = self._config.PID
         return plugin_conf
 
-
-
     def calculate(self):
 
         if (not self._config.PID):
@@ -42,13 +40,12 @@ class linux_coredump(linux_pslist.linux_pslist):
         if (not self._config.OUTPUT_FILE):
             debug.error("Please specify an output file (--output-file)")
 
+        self._config.OUTPUT_FILE = os.path.join(self._config.DUMP_DIR, self._config.OUTPUT_FILE)
         common.set_plugin_members(self)
         x86 = False
 
         if self.profile.metadata['arch'] not in ["x64" , "x86"]:
             debug.error("This plugin is only supported on Intel-based memory captures")
-
-
 
         plugin_conf = self.build_conf()
         plugin = dump_map.linux_dump_map(plugin_conf)
@@ -65,7 +62,7 @@ class linux_coredump(linux_pslist.linux_pslist):
             if fname == '[stack]':
                 if self.addr_space.profile.metadata['arch'] == "x86" or vma.vm_end < 2**32:
                     x86=True
-        if empty is True:
+        if empty:
             debug.error("The reqeusted pid does not exist!")
 
         threads_registers = {}
@@ -84,17 +81,12 @@ class linux_coredump(linux_pslist.linux_pslist):
                 i += 1
         self.cd=coredump.coredump(tsk,vma_list,threads_registers,x86)
         self.cd.generate_coredump()
-
-
-
+        
         del plugin
         return
 
     def render_text(self, outfd, data):
-        file_path = os.path.join(self._config.DUMP_DIR, self._config.OUTPUT_FILE)
-        outfile=open(file_path,'wb')
         if self.cd:
-            self.cd.write(outfile)
+            self.cd.write(outfd)
         else:
             debug.error('An error occurred while creatng the core dump!')
-        os.unlink(outfd.name)
