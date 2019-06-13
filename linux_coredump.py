@@ -93,7 +93,6 @@ class linux_coredump(linux_pslist.linux_pslist):
         return
 
     def render_text(self, outfd, data):
-        print self._config.DUMP_DIR,self._config.OUTPUT_FILE
         file_path = os.path.join(self._config.DUMP_DIR, self._config.OUTPUT_FILE)
         outfd=open(file_path,'wb')
         if self.cd:
