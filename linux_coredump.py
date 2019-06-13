@@ -94,9 +94,9 @@ class linux_coredump(linux_pslist.linux_pslist):
 
     def render_text(self, outfd, data):
         file_path = os.path.join(self._config.DUMP_DIR, self._config.OUTPUT_FILE)
-        outfd=open(file_path,'wb')
+        outfile=open(file_path,'wb')
         if self.cd:
-            self.cd.write(outfd)
+            self.cd.write(outfile)
         else:
             debug.error('An error occurred while creatng the core dump!')
-
+        os.unlink(outfd.name)
